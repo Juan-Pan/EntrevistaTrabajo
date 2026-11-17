@@ -28,7 +28,7 @@ class ProductControllerIntegrationTest {
     private static final String VALID_PRODUCT = """
             {
               "name": "Monitor",
-              "description": "27-inch 4K monitor",
+              "description": "27-pulgadas 4K monitor",
               "price": 1299000.00,
               "stock": 7
             }

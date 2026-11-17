@@ -32,11 +32,11 @@ class ProductServiceTest {
 
     @Test
     void findAllReturnsEveryProduct() {
-        when(productRepository.findAll()).thenReturn(List.of(aProduct("Mouse"), aProduct("Keyboard")));
+        when(productRepository.findAll()).thenReturn(List.of(aProduct("Mouse"), aProduct("Teclado")));
 
         List<ProductResponse> products = productService.findAll();
 
-        assertThat(products).extracting(ProductResponse::name).containsExactly("Mouse", "Keyboard");
+        assertThat(products).extracting(ProductResponse::name).containsExactly("Mouse", "Teclado");
     }
 
     @Test
@@ -50,7 +50,7 @@ class ProductServiceTest {
 
     @Test
     void createSavesTheProduct() {
-        ProductRequest request = new ProductRequest("Mouse", "Wireless", new BigDecimal("89900.00"), 5);
+        ProductRequest request = new ProductRequest("Mouse", "Inalambrico", new BigDecimal("89900.00"), 5);
         when(productRepository.save(any(Product.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
         ProductResponse created = productService.create(request);
