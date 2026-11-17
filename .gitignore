@@ -1,0 +1,23 @@
+# Build output
+target/
+out/
+
+# Maven wrapper (keep the wrapper properties, ignore downloaded jars)
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code / Eclipse
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
